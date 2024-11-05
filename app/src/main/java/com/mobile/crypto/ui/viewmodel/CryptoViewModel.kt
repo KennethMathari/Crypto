@@ -58,6 +58,14 @@ class CryptoViewModel(
                         Log.e("Result", result.data.toString())
 
                     }
+
+                    is NetworkResult.ServerError -> {
+                        _cryptoState.value = CryptoState(
+                            isLoading = false,
+                            errorMessage = "Oops! Our Server is Down.",
+                            cryptoDTO = null
+                        )
+                    }
                 }
             }
         }

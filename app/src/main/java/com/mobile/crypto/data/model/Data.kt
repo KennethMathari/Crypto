@@ -15,7 +15,7 @@ data class Data(
     @SerialName("marketCapUsd")
     val marketCapUsd: String,
     @SerialName("maxSupply")
-    val maxSupply: String,
+    val maxSupply: String?,
     @SerialName("name")
     val name: String,
     @SerialName("priceUsd")
